@@ -1,0 +1,27 @@
+@charset "utf-8";
+.div_pic {
+	width:1000px;
+	height:450px;
+	margin:0px auto;
+}
+.p {
+	/*内边距*/
+	padding:10px 20px 20px;
+	background:white;
+	/*背景*/
+	/*左移，下移，虚化*/
+	box-shadow:5px 5px 4px rgba(50,50,50,0.5);
+	width:150px;
+	/*相对定位*/
+	position:relative;
+}
+/*每张图片倾斜角度*/
+.p1 {transform:rotate(-5deg);}.p2 {transform:rotate(9deg);}.p3 {transform:rotate(-16deg);}.p4 {transform:rotate(-3deg);}.p5 {transform:rotate(8deg);}
+.p6 {transform:rotate(5deg);}.p7 {transform:rotate(-38deg);}.p8 {transform:rotate(16deg);}.p9 {transform:rotate(-8deg);}.p10{transform:rotate(8deg);}
+.p11{transform:rotate(2deg);}.p14{transform:rotate(8deg);}.p12{transform:rotate(10deg);}.p13{transform:rotate(-2deg);}.p15{transform:rotate(-5deg);}
+
+.div_pic img:hover {
+	/*旋转角度变回0*/
+	transform:rotate(0deg) scale(2.5);
+	z-index:9;
+}

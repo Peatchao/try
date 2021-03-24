@@ -1,0 +1,30 @@
+body{
+	background: #edcbcb52;
+}
+.paper {
+	position:relative;
+	width:700px;
+	height:300px;
+	background:#ffe1e8;
+	border:1px solid #eee;
+	margin:0 auto;
+	box-shadow:0 0 5px rgba(0,0,0,0.27),0 0 20px  rgba(0,0,0,.1) inset;
+}
+.paper_title{
+	text-align: center;
+	font-size: 18px;
+	margin-top: 20px;
+}
+.pager_word{
+	margin: 0 auto;
+	width: 600px;
+	font-size: 18px;
+	margin-top: 10px;
+	letter-spacing:2px;
+	line-height: 190%;
+}
+.author{
+	font-size: 16px;
+	float: right;
+	margin-right: 80px;
+}
