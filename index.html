@@ -1,12 +1,258 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>感谢permissiondog</title>
-</head>
-我成功弄出了我的第一个网页。但是没啥意义。
-
-<body>
-感谢permissiondog
-</body>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>故事小屋</title>
+		<link rel="icon" href="img/爱心.png" type="image/x-icon"/>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/shubiaoaixin.js"></script>
+		<link href="css/header.css" rel="stylesheet">
+	</head>
+	<script type="text/javascript">
+	    //得到时间并写入div
+	   function getDate(){
+		   var date1= '2020/06/19 00:00:00';  //开始时间
+		   var date2 = new Date();    //结束时间
+		   var date3 = date2.getTime() - new Date(date1).getTime();   //时间差的毫秒数      
+		   //------------------------------
+		   //计算出相差天数
+		   var days=Math.floor((date3/(24*3600*1000))+1)
+		   //计算出小时数
+		   //var leave1=date3%(24*3600*1000)    //计算天数后剩余的毫秒数
+		   //var hours=Math.floor(leave1/(3600*1000))
+		   //计算相差分钟数
+		   //var leave2=leave1%(3600*1000)        //计算小时数后剩余的毫秒数
+		   //var minutes=Math.floor(leave2/(60*1000))
+		   //计算相差秒数
+		   //var leave3=leave2%(60*1000)      //计算分钟数后剩余的毫秒数
+		   //var seconds=Math.round(leave3/1000)
+	        //获取当前时间	
+	       // var date = new Date();
+	       //  //格式化为本地时间格式
+	       //  var date1 = date.toLocaleString();
+	        //获取div
+	        var div1 = document.getElementById("times");
+	       //将时间写入div
+	        div1.innerHTML = "♥pure的恋爱的第"+days+"天♥";
+	    }	
+			//使用定时器每秒向div写入当前时间
+			setInterval("getDate()",1000);
+	</script>
+	<style type="text/css">
+		.middle{
+			width: 80%;
+			margin: 0 auto;
+		}
+		.container-fluid {
+			padding: 0;
+		}
+		.fenge{
+			text-align: center;
+			color: #DCA7A7;
+			font-size:16px;
+			margin-top: 20px;;
+		}
+		.maodian{
+			width:80%;
+			height: 200px;
+			margin: 0 auto;
+			background:#FBF7F6;
+			font-size:20px;
+			color: #E7C3C3;
+			margin-top: 20px;
+			margin-bottom: 80px;
+		}
+		#times{
+			text-align: center;
+			padding-top: 30px;
+		}
+		.wenzi{
+			float: left;
+			margin-left:200px;
+			margin-top: 30px;
+		}
+		.wenzi_a{
+			float: left;
+			margin-left:200px;
+			margin-top: 30px;
+		}
+		.wenzi_b{
+			margin-left:185px;
+			float: left;
+			margin-top: 30px;
+		}
+		.wenzi_font{
+			font-size: 17px;
+			max-width: 200px;
+		}
+		.maodian a{
+			color:#E7C3C3;
+		}
+		.note{
+			width: 80%;
+			margin: 0 auto;
+			margin-top: 20px;
+		}
+		.note a{
+			margin-top: 50px;
+		}
+		.model{
+			margin-bottom: 100px;
+		}
+		.img_size{
+			width: 300px;
+			margin-left: 70px;
+		}
+		.img_body{
+			float: left;
+		}
+		.img_bodyup{
+			margin-bottom: 15px;
+		}
+	</style>
+		
+	<body>
+		<div class="header">
+			<a href="index.html"><div class="logo">
+				<span style="font-size: 20px;font-weight: 550;">Sweetheart</span>
+				<img src="img/爱心.png" width="15px">
+			</div></a>
+			<div class="header_right">
+				<ul>
+					<a href="index.html"><li style="color: red">首页</li></a>
+					<a href="photo.html"><li>照片墙</li></a>
+					<a href="course.html"><li>历程</li></a>
+					<a href="myheart.html"><li>我说</li></a>
+				</ul>
+			</div>
+			<div style="float: right;margin-top:18px;margin-right: 60px;"><a href="js.html"><img src="img/爱心.png" width="30px"></div></a>
+		</div>
+		<div class="middle">
+			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+			    <ol class="carousel-indicators">
+			        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+			        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+			        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+			    </ol>
+			    <div class="carousel-inner container-fluid" role="listbox">
+			        <div class="item active">
+			            <img src="img/banner01.jpg" >
+			        </div>
+			        <div class="item">
+			            <img src="img/banner02.jpg" >
+			        </div>
+			        <div class="item">
+			            <img src="img/banner03.jpg" >
+			        </div>
+			    </div>
+			    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+			        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			        <span class="sr-only">Previous</span>
+			    </a>
+			    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+			        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			        <span class="sr-only">Next</span>
+			    </a>
+			</div>	
+		</div>
+		<div class="fenge">——<span style="margin-left: 15px;margin-right: 15px;margin-bottom: 15px;">love</span>——</div>
+		<div class="maodian">
+			<div id="times"></div>
+			<a href="#相册">
+				<div class="wenzi_b">
+					<img src="img/相册.png" >
+					<span>我们的相册</span>
+					<div class="wenzi_font">我们所经历的，欢笑，泪水，都值得记忆。</div>
+				</div>
+			</a>
+			<a href="#历程">
+				<div class="wenzi_a">
+					<img src="img/历程.png" >
+					<span>我们的历程</span>
+					<div class="wenzi_font">我们一起走过了开头，却不会走到结束，幸福，大概莫过于此吧。</div>
+				</div>
+			</a>
+			<a href="#气泡">
+				<div class="wenzi">
+					<img src="img/气泡.png" >
+					<span>我想说</span>
+					<div class="wenzi_font">抬头是你，闭眼是你。</div>
+				</div>
+			</a>
+		</div>
+		<div class="fenge">——<span style="margin-left: 15px;margin-right: 15px;">love you so much</span>——</div>
+		<div class="note">
+			<div class="model">
+				<a name="历程">
+					<div class="panel panel-danger">
+						<div class="panel-heading">
+							<h3 class="panel-title">The roses road<a href="course.html" style="margin-left: 1020px;">more</a></h3>
+						</div>
+						<div class="panel-body">
+							<div class="img_body">
+								<div class="img_bodyup"><img src="img/我的省选.jpg" class="img_size" height="225px;"></div>
+								<span style="margin-left: 120px; color: #eb91a0;">2020/6/19 今天我们在一起啦。(虽然，不知道是不是月月为了哄我而。）</span>
+							</div>
+							<!--
+                            <div class="img_body">
+								<div class="img_bodyup"><img src="img/照片04.jpg" class="img_size"></div>
+								<span style="margin-left: 120px; color: #eb91a0;">2019/4/12 今天我们公开了恋爱关系</span>
+							</div>
+                            -->
+							<div class="img_body">
+								<div class="img_bodyup"><img src="img/集训结束.jpg" class="img_size"></div>
+								<span style="margin-left: 120px; color: #eb91a0;">2020/9/10 今天我们，一起经历了，充实，幸福的集训</span>
+							</div>
+							<div class="img_body">
+								<div class="img_bodyup"><img></div>
+								<span style="margin-left: 120px; color: #eb91a0;">there is no end of our story——etc</span>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="model">
+				<a name="相册">
+					<div class="panel panel-danger">
+						<div class="panel-heading">
+							<h3 class="panel-title">Memory back<a href="photo.html" style="margin-left: 1040px;">more</a></h3>
+						</div>
+						<div class="panel-body">
+							<div class="img_body">
+								<div class="img_bodyup"><img src="img/小时候1.jpg" class="img_size" height="225px"></div>
+								<span style="margin-left: 180px; color: #eb91a0;">月月（幼年）&气球</span>
+							</div>
+							<div class="img_body">
+								<div class="img_bodyup"><img src="img/小时候2.jpg" class="img_size"></div>
+								<span style="margin-left: 180px; color: #eb91a0;">月月（青少年）&公园</span>
+							</div>
+							<div class="img_body">
+								<div class="img_bodyup"><img src="img/小时候3.jpg" class="img_size"></div>
+								<span style="margin-left: 160px; color: #eb91a0;">月月（青少年）&公园·楼梯</span>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="model">
+				<a name="气泡">
+					<div class="panel panel-danger">
+						<div class="panel-heading">
+							<h3 class="panel-title">I say<a href="myheart.html" style="margin-left: 1110px;">more</a></h3>
+						</div>
+						<div class="panel-body">
+							<span style="color:#E7C3C3;">你是我的春暖，是我的花开，是我盛夏的燕间呢喃，是我人间六月天</span>
+                            <br>
+                            <span style="color:#E7C3C3;">你是我三生的幸，是我百年修得同船渡，是我前年（将要）修得共枕眠，是我心安的乡，是我铁血的柔，你是我们两情的相悦，我们志同的道合，我们白头的偕老</span>
+                            <span style="color:#E7C3C3;"> </span>
+                        </div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</body>
 </html>

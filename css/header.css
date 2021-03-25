@@ -1,0 +1,37 @@
+
+		body{
+			margin: 0;
+			padding: 0; 
+			cursor:url('../img/aixin.ico'),auto;
+			background:#ffe0e038;
+		}
+		.header{
+			width: 80%;
+			height: 100px;
+			margin: 0 auto;
+		}
+		.header .logo{
+			float: left;
+			margin-top: 20px;
+		}
+		.header_right{
+			margin-left: 200px;
+		}
+		.header_right ul li{
+			float: left;
+			list-style-type:none;
+			font-size: 18px;
+			font-family:"黑体";
+			margin-left: 100px;
+			margin-top: 23px;
+		}
+		a{
+			color: black;
+		}
+		a:hover{
+			text-decoration: none;
+			color: chocolate;
+		}
+		.header_right a:hover{
+			color: chocolate;
+		}
